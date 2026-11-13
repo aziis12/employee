@@ -10,7 +10,11 @@ function sudahlogin() {
 
 function wajiblogin() {
     if (!sudahlogin()) {
-        header('Location: login.php');
+        $basePath = dirname($_SERVER['SCRIPT_NAME']);
+        if (basename($basePath) === 'php') {
+            $basePath = dirname($basePath);
+        }
+        header('Location: ' . rtrim($basePath, '/\\') . '/login.php');
         exit;
     }
 }

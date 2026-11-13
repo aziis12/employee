@@ -2,6 +2,7 @@
 require_once 'php/fungsi.php';
 wajiblogin();
 
+//ini buat paginasi
 $perHalaman   = 5;
 $halaman      = max(1, (int) ($_GET['halaman'] ?? 1));
 $totalData    = hitungPegawai($pdo);
@@ -42,6 +43,7 @@ include 'includes/header.php';
     </table>
 </div>
 
+
 <nav>
     <ul class="pagination justify-content-center">
         <li class="page-item <?= $halaman <= 1 ? 'disabled' : '' ?>">
@@ -57,4 +59,5 @@ include 'includes/header.php';
         </li>
     </ul>
 </nav>
+
 <?php include 'includes/footer.php'; ?>

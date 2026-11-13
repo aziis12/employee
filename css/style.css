@@ -1,4 +1,3 @@
-/* ===== Warna tema: hijau biru laut ===== */
 :root {
     --laut-gelap: #0B3C49;   /* header */
     --laut: #0E7C86;         /* warna utama / tombol */
@@ -73,7 +72,7 @@ body { background-color: var(--latar); color: #12262A; }
 }
 .table-dark { --bs-table-bg: var(--laut-gelap); --bs-table-border-color: var(--laut-gelap); }
 
-/* ===== Tombol pilihan jenis kelamin (mengikuti warna tema) ===== */
+/*  Tombol pilihan jenis kelamin  */
 .btn-outline-primary {
     --bs-btn-color: var(--laut);
     --bs-btn-border-color: var(--laut);

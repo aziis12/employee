@@ -1,5 +1,5 @@
 $(function () {
-  // 1b. VALIDASI FORM (JavaScript)
+  // VALIDASI FORM (JavaScript)
   // Form yang punya class "needs-validation" dicek sebelum dikirim
   $("form.needs-validation").on("submit", function (event) {
     if (!this.checkValidity()) {
@@ -9,7 +9,7 @@ $(function () {
     $(this).addClass("was-validated"); // tampilkan pesan error Bootstrap
   });
 
-  // 1a. ANIMASI (JavaScript): angka total pegawai menghitung naik dari 0
+  // ANIMASI (JavaScript): angka total pegawai menghitung naik dari 0
   $(".counter").each(function () {
     var $el = $(this);
     var target = parseInt($el.data("target"), 10) || 0;
@@ -27,7 +27,7 @@ $(function () {
     );
   });
 
-  // 2b. AJAX (jQuery): hapus pegawai tanpa reload halaman
+  // AJAX (jQuery): hapus pegawai tanpa reload halaman
   $(".btn-hapus").on("click", function () {
     var id = $(this).data("id");
     if (!confirm("Yakin ingin menghapus pegawai ini?")) {
