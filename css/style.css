@@ -1,0 +1,103 @@
+/* ===== Warna tema: hijau biru laut ===== */
+:root {
+    --laut-gelap: #0B3C49;   /* header */
+    --laut: #0E7C86;         /* warna utama / tombol */
+    --laut-tua: #0B6169;     /* hover */
+    --laut-muda: #7FD1C7;    /* garis aktif */
+    --latar: #F3F8F7;
+    --garis: #D3E3E1;
+
+    --bs-primary: #0E7C86;
+    --bs-primary-rgb: 14, 124, 134;
+    --bs-link-color: #0E7C86;
+    --bs-link-hover-color: #0B6169;
+}
+
+body { background-color: var(--latar); color: #12262A; }
+
+/* Font judul */
+.judul-serif { font-family: 'Fraunces', Georgia, serif; font-weight: 600; }
+.judul-halaman { font-size: 2.5rem; }
+
+/* Header */
+.header-utama { background-color: var(--laut-gelap); border-bottom: 4px solid var(--laut); }
+.header-utama .nav-link { padding: 0.5rem 1rem; color: #D5E6E4; }
+.header-utama .nav-link.active {
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 2px solid var(--laut-muda);
+}
+.logo-brand {
+    height: 40px;
+    width: auto;
+    background: #fff;
+    border-radius: 6px;
+    padding: 3px;
+}
+/* Header halaman login */
+.login-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.login-header .logo-brand {
+    display: block;
+    height: 50px;
+    width: auto;
+    margin: 0 auto 1rem;
+    background: transparent;
+    padding: 0;
+}
+
+.login-header h4 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* Footer */
+.footer-utama {
+    background-color: var(--laut-gelap);
+    border-top: 4px solid var(--laut);
+    color: #D5E6E4;
+    font-size: 0.9rem;
+}
+
+/* Tombol utama & tabel mengikuti warna tema */
+.btn-primary {
+    --bs-btn-bg: var(--laut);
+    --bs-btn-border-color: var(--laut);
+    --bs-btn-hover-bg: var(--laut-tua);
+    --bs-btn-hover-border-color: var(--laut-tua);
+    --bs-btn-active-bg: var(--laut-tua);
+    --bs-btn-active-border-color: var(--laut-tua);
+}
+.table-dark { --bs-table-bg: var(--laut-gelap); --bs-table-border-color: var(--laut-gelap); }
+
+/* Kartu dashboard */
+.kartu-info {
+    background: #fff;
+    border: 1px solid var(--garis);
+    border-radius: 6px;
+    color: inherit;
+}
+.kartu-info .ikon { font-size: 2.5rem; color: var(--laut); }
+.kartu-aksen { background: var(--laut); color: #fff; border: 0; border-radius: 6px; }
+.kartu-aksen .ikon { font-size: 2.5rem; color: #fff; }
+
+/* Animasi sederhana (CSS): muncul pelan sambil naik */
+@keyframes munculNaik {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade { animation: munculNaik 0.6s ease both; }
+
+/* Efek hover pada kartu */
+.card { transition: transform 0.2s, box-shadow 0.2s; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(11,60,73,.15); }
+
+/* Tampilan responsif untuk layar HP */
+@media (max-width: 576px) {
+    main.container { padding-left: 12px; padding-right: 12px; }
+    .judul-halaman { font-size: 1.9rem; }
+    .btn-sm { margin-bottom: 4px; }
+}
