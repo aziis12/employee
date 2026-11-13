@@ -13,6 +13,7 @@ include 'includes/header.php';
         <table class="table table-borderless mb-0">
             <tr><th style="width:150px">NIP</th><td><?= teksaman($p['nip']) ?></td></tr>
             <tr><th>Nama</th><td><?= teksaman($p['nama']) ?></td></tr>
+            <tr><th>Jenis kelamin</th><td><?= teksaman($p['jenis_kelamin']) ?></td></tr>
             <tr><th>Email</th><td><?= teksaman($p['email']) ?></td></tr>
             <tr><th>No HP</th><td><?= teksaman($p['nohp']) ?></td></tr>
             <tr><th>Alamat</th><td><?= teksaman($p['alamat']) ?></td></tr>

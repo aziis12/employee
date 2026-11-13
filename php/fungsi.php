@@ -42,16 +42,15 @@ function hitungpegawai($pdo) {
     return (int) $pdo->query('SELECT COUNT(*) FROM pegawai')->fetchColumn();
 }
 
-//CREATE
+//create
 function tambahpegawai($pdo, $d) {
     $stmt = $pdo->prepare('INSERT INTO pegawai (nip, nama, jenis_kelamin, nohp, email, alamat, jabatan) VALUES (?, ?, ?, ?, ?, ?, ?)');
-    return $stmt->execute([$d['nip'], $d['nama'], $d['nohp'], $d['email'], $d['alamat'], $d['jabatan']]);
+    return $stmt->execute([$d['nip'], $d['nama'], $d['jenis_kelamin'], $d['nohp'], $d['email'], $d['alamat'], $d['jabatan']]);
 }
-
-//UPDATE
+//update
 function ubahpegawai($pdo, $id, $d) {
     $stmt = $pdo->prepare('UPDATE pegawai SET nip = ?, nama = ?, jenis_kelamin = ?, nohp = ?, email = ?, alamat = ?, jabatan = ? WHERE id = ?');
-    return $stmt->execute([$d['nip'], $d['nama'], $d['nohp'], $d['email'], $d['alamat'], $d['jabatan'], $id]);
+    return $stmt->execute([$d['nip'], $d['nama'], $d['jenis_kelamin'], $d['nohp'], $d['email'], $d['alamat'], $d['jabatan'], $id]);
 }
 
 //DEL

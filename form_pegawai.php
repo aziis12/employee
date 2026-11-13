@@ -33,19 +33,26 @@ include 'includes/header.php';
             <input type="text" class="form-control" id="nama" name="nama" value="<?= teksaman($p['nama']) ?>" required>
             <div class="invalid-feedback">Nama wajib diisi.</div>
         </div>
+
         <div class="col-md-6">
             <label class="form-label d-block">Jenis kelamin</label>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="jenis_kelamin" id="jk_l" value="Laki-laki" required
+            <div class="btn-group w-100 grup-jk" role="group" aria-label="Jenis kelamin">
+                <input type="radio" class="btn-check" name="jenis_kelamin" id="jk_l" value="Laki-laki" autocomplete="off" required
                        <?= $p['jenis_kelamin'] == 'Laki-laki' ? 'checked' : '' ?>>
-                <label class="form-check-label" for="jk_l">Laki-laki</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="jenis_kelamin" id="jk_p" value="Perempuan"
+                <label class="btn btn-outline-primary" for="jk_l">Laki-laki</label>
+
+                <input type="radio" class="btn-check" name="jenis_kelamin" id="jk_p" value="Perempuan" autocomplete="off" required
                        <?= $p['jenis_kelamin'] == 'Perempuan' ? 'checked' : '' ?>>
-                <label class="form-check-label" for="jk_p">Perempuan</label>
+                <label class="btn btn-outline-primary" for="jk_p">Perempuan</label>
             </div>
+            <div class="invalid-feedback">Pilih jenis kelamin.</div>
         </div>
+        <div class="col-md-6">
+            <label class="form-label" for="jabatan">Jabatan</label>
+            <input type="text" class="form-control" id="jabatan" name="jabatan" value="<?= teksaman($p['jabatan']) ?>" required>
+            <div class="invalid-feedback">Jabatan wajib diisi.</div>
+        </div>
+
         <div class="col-md-6">
             <label class="form-label" for="email">Email</label>
             <input type="email" class="form-control" id="email" name="email" value="<?= teksaman($p['email']) ?>" required>
@@ -56,15 +63,11 @@ include 'includes/header.php';
             <input type="text" class="form-control" id="nohp" name="nohp" value="<?= teksaman($p['nohp']) ?>" required pattern="[0-9]{8,15}">
             <div class="invalid-feedback">No HP wajib diisi (8-15 digit angka).</div>
         </div>
-        <div class="col-md-6">
+
+        <div class="col-12">
             <label class="form-label" for="alamat">Alamat</label>
-            <input type="text" class="form-control" id="alamat" name="alamat" value="<?= teksaman($p['alamat']) ?>" required>
+            <textarea class="form-control" id="alamat" name="alamat" rows="3" required><?= teksaman($p['alamat']) ?></textarea>
             <div class="invalid-feedback">Alamat wajib diisi.</div>
-        </div>
-        <div class="col-md-6">
-            <label class="form-label" for="jabatan">Jabatan</label>
-            <input type="text" class="form-control" id="jabatan" name="jabatan" value="<?= teksaman($p['jabatan']) ?>" required>
-            <div class="invalid-feedback">Jabatan wajib diisi.</div>
         </div>
     </div>
     <div class="mt-4">

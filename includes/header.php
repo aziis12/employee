@@ -1,4 +1,4 @@
-<?php $halaman = basename($_SERVER['PHP_SELF']); ?>
+<?php $menuAktif = basename($_SERVER['PHP_SELF']); ?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -26,10 +26,10 @@
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link <?= $halaman == 'dashboard.php' ? 'active' : '' ?>" href="dashboard.php">Dashboard</a>
+                    <a class="nav-link <?= $menuAktif == 'dashboard.php' ? 'active' : '' ?>" href="dashboard.php">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= in_array($halaman, ['pegawai.php', 'form_pegawai.php', 'detail_pegawai.php']) ? 'active' : '' ?>" href="pegawai.php">Daftar Pegawai</a>
+                    <a class="nav-link <?= in_array($menuAktif, ['pegawai.php', 'form_pegawai.php', 'detail_pegawai.php']) ? 'active' : '' ?>" href="pegawai.php">Daftar Pegawai</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="php/logout.php">Logout</a>

@@ -73,6 +73,29 @@ body { background-color: var(--latar); color: #12262A; }
 }
 .table-dark { --bs-table-bg: var(--laut-gelap); --bs-table-border-color: var(--laut-gelap); }
 
+/* ===== Tombol pilihan jenis kelamin (mengikuti warna tema) ===== */
+.btn-outline-primary {
+    --bs-btn-color: var(--laut);
+    --bs-btn-border-color: var(--laut);
+    --bs-btn-hover-bg: var(--laut);
+    --bs-btn-hover-border-color: var(--laut);
+    --bs-btn-active-bg: var(--laut);
+    --bs-btn-active-border-color: var(--laut);
+    --bs-btn-focus-shadow-rgb: 14, 124, 134;
+}
+.btn-check:checked + .btn-outline-primary {
+    background-color: var(--laut);
+    border-color: var(--laut);
+    color: #fff;
+}
+
+/* Saat validasi gagal: tombol jadi merah & pesan error tampil */
+.was-validated .grup-jk:has(input:invalid) .btn-outline-primary {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+.was-validated .grup-jk:has(input:invalid) + .invalid-feedback { display: block; }
+
 /* Kartu dashboard */
 .kartu-info {
     background: #fff;
